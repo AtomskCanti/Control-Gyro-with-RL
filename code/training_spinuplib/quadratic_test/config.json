@@ -1,0 +1,51 @@
+{
+    "ac_kwargs":	{
+        "activation":	"ReLU",
+        "hidden_sizes":	[
+            700,
+            70,
+            10
+        ]
+    },
+    "act_noise":	0.5,
+    "actor_critic":	"MLPActorCritic",
+    "batch_size":	150,
+    "env_fn":	"functools.partial(<function env_fn at 0x7f7c860d3510>, env_name='gyroscopeenv-v0', reward_type='Quadratic', reward_args={'qx1': 9, 'qx2': 0.05, 'qx3': 9, 'qx4': 0.05, 'pu1': 0.1, 'pu2': 0.1}, ep_len=110)",
+    "epochs":	800,
+    "exp_name":	"quadratic test",
+    "gamma":	0.985,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f7c555141d0>":	{
+            "epoch_dict":	{},
+            "exp_name":	"quadratic test",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"quadratic_test",
+            "output_file":	{
+                "<_io.TextIOWrapper name='quadratic_test/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"quadratic test",
+        "output_dir":	"quadratic_test"
+    },
+    "max_ep_len":	110,
+    "noise_clip":	0.04,
+    "num_test_episodes":	10,
+    "pi_lr":	0.0015,
+    "policy_delay":	2,
+    "polyak":	0.999,
+    "q_lr":	0.0015,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	10,
+    "start_steps":	20000,
+    "steps_per_epoch":	1650,
+    "target_noise":	0.2,
+    "update_after":	1000,
+    "update_every":	50
+}

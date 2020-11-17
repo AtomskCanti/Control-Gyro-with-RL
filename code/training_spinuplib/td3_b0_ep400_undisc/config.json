@@ -1,0 +1,49 @@
+{
+    "ac_kwargs":	{
+        "activation":	"ReLU",
+        "hidden_sizes":	[
+            300
+        ]
+    },
+    "act_noise":	0.1,
+    "actor_critic":	"MLPActorCritic",
+    "batch_size":	100,
+    "env_fn":	"env_fn",
+    "epochs":	100,
+    "exp_name":	"td3_b0_ep400_undisc",
+    "gamma":	0.999999,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f244c1a8d68>":	{
+            "epoch_dict":	{},
+            "exp_name":	"td3_b0_ep400_undisc",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"td3_b0_ep400_undisc",
+            "output_file":	{
+                "<_io.TextIOWrapper name='td3_b0_ep400_undisc/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"td3_b0_ep400_undisc",
+        "output_dir":	"td3_b0_ep400_undisc"
+    },
+    "max_ep_len":	400,
+    "noise_clip":	0.5,
+    "num_test_episodes":	10,
+    "pi_lr":	0.001,
+    "policy_delay":	2,
+    "polyak":	0.995,
+    "q_lr":	0.001,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	10000,
+    "steps_per_epoch":	6000,
+    "target_noise":	0.2,
+    "update_after":	1000,
+    "update_every":	50
+}

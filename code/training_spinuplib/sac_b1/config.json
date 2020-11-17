@@ -1,0 +1,45 @@
+{
+    "ac_kwargs":	{
+        "activation":	"ReLU",
+        "hidden_sizes":	[
+            1000
+        ]
+    },
+    "actor_critic":	"MLPActorCritic",
+    "alpha":	0.2,
+    "batch_size":	100,
+    "env_fn":	"functools.partial(<function env_fn at 0x7fb0347fb488>, env_name='gyroscopeenv-v0', reward_type='Quadratic', reward_args={'qx1': 9, 'qx2': 0.05, 'qx3': 9, 'qx4': 0.05, 'pu1': 0.1, 'pu2': 0.1}, ep_len=110)",
+    "epochs":	100,
+    "exp_name":	"sac_b1",
+    "gamma":	0.99,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7fb003c1e208>":	{
+            "epoch_dict":	{},
+            "exp_name":	"sac_b1",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"sac_b1",
+            "output_file":	{
+                "<_io.TextIOWrapper name='sac_b1/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"sac_b1",
+        "output_dir":	"sac_b1"
+    },
+    "lr":	0.001,
+    "max_ep_len":	110,
+    "num_test_episodes":	10,
+    "polyak":	0.9,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	5000,
+    "steps_per_epoch":	1650,
+    "update_after":	1000,
+    "update_every":	50
+}
