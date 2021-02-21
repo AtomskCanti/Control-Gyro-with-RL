@@ -4,18 +4,40 @@
 
 https://github.com/openai/gym/blob/master/docs/creating-environments.md
 
-- To import a specific environment: 
+- To import a specific environment, update the __init__.py file in gym_gyroscope_env/gym_gyroscope_env:
 
 from gym.envs.registration import register
+
 register(
     id = 'GyroscopeEnv-v0', 
-    entry_point = 'gym_gyroscope_env.gyroscope_env:GyroscopeEnv'
+    entry_point = 'gym_gyroscope_env.envs:GyroscopeEnvV0'
 )
+
+- Also update the __init__.py file in gym_gyroscope_env/gym_gyroscope_env/envs:
+
+from gym_gyroscope_env.envs.gyroscope_env_v0 import GyroscopeEnvV0
 
 - To use using the env_fn from the custom_functions module function that allows to pass arguments to the class:
 
-reward_args = {'qx1':6,'qx2':0.01,'qx3':6,'qx4':0.01,'pu1':0.05,'pu2':0.05}
-env_fn = partial(env_fn,env_name = 'GyroscopeEnv-v0',reward_type = 'Quadratic', reward_args = reward_args)
+env_name = 'GyroscopeEnv-v0'
+
+simu_args = {
+    'dt': 0.05,
+    'ep_len': 100,
+    'seed': 2
+}
+
+reward_func = 'Quadratic'
+
+reward_args = {
+    'qx1': 9, 
+    'qx2': 0.05, 
+    'qx3': 9, 
+    'qx4': 0.05, 
+    'pu1': 0.1, 
+    'pu2': 0.1
+}
+env_fn = partial(env_fn, env_name, simu_args = simu_args, reward_func = reward_func, reward_args = reward_args)
 
 - To install: 
 

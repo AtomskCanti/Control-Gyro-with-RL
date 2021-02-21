@@ -22,8 +22,6 @@ def env_fn(env_name,simu_args={},reward_func='Quadratic',reward_args={}):
 def create_env(env_name,simu_args={},reward_func='Quadratic',reward_args={},state=None,param=None):
     env = gym.make(env_name)
     env.init(simu_args, reward_func, reward_args)
-#     if env_name == 'gyroscoperobustenv-v0':
-#         env.init_param(param)
     env.reset(state)
     return env
 
