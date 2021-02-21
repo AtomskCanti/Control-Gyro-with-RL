@@ -1,1 +1,0 @@
-test the dynamics of the gyroscope model
