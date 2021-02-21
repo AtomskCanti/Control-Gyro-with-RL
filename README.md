@@ -23,42 +23,35 @@ pip install -e . ```
 
 The project folder consists of two main directories:
 ```bash
-├── code 'All code files and model files of the project'
-└── report 'Report and pictures of the report'
+├── code 'All code files of the project'
+└── report 'Report， slide, and a video of the report'
 ```
 
 The *code* directory contains the utilities, experiments and results of the project. Not all directories and sub-directories are shown here, such as the many model folders that were generated during the experimentation process, but the most relevant ones are. To understand what the many model experimentation folders correspond to, please refer to the notebooks where the experiments are performed. 
 ```bash
-├── custom_functions 'Custom python library implementing useful functions for the project'
-├── environment
-│   ├── Gyroscope 'Environment folder ready for import as a library'
-│   │   └── gym_GyroscopeEnv
-│   │       └── envs
-│   │           ├── gyroscopediscontinuous_env.py 'Environment with discontinuity'
-│   │           ├── gyroscope_env.py 'Simple environment'
-│   │           ├── gyroscopeintegral_env.py 'Environment with additionam integral term'
-│   │           └── gyroscoperobust_env.py 'Robust environment'
-│   └── gyroscope_environment_testing.ipynb 'Simulation code (python class) transferred to the Gym API'
+├── data_report 'Figure and data for report'
+│   ├── data_delay 'Show the effect of computational delay'
+│   ├── data_discontinuity 'Show discontinuity of reference angle'
+│   ├── data_integration 'Show discontinuity of integration function'
+│   ├── data_validation 'Validate gyro model'
+├── reward_funciton 'Test different reward functions'
+│   ├── reward_int_v0 'test reward functions on GyroscopeIntegralEnv-v0'
+│   ├── reward_int_v1 'test reward functions on GyroscopeIntegralEnv-v1'
+│   ├── reward_quad_v0 'test reward functions on GyroscopeEnv-v0'
+│   ├── reward_quad_v1 'test reward functions on GyroscopeEnv-v1'
+│   ├── reward_sparse 'test sparse reward functions on GyroscopeEnv-v1'
 ├── simulation 'Initial simulation experiments'
-│   ├── AgramFrame.png
+│   ├── AgramFrame.png 'Figure of gyro'
 │   └── gyroscope_simulation.ipynb 'Simulation coding and experiments'
-├── training_spinuplib 'Experiments using the spinning up library'
-│   ├── activations_visualization.ipynb 'Visualization notebook to cluster activations using t-SNE'
-│   ├── baseline_norm_ddpg_td3_sac.ipynb 'Testing notebook between DRL algorithms for norm. reward'
-│   ├── baseline_quadreward_ddpg_td3_sac.ipynb 'Testing notebook between DRL algorithms for quad. reward'
-│   ├── discontinuity_ddpg.ipynb 'Testing notebook for discontinuous environment'
-│   ├── envvariants_quadreward.ipynb 'Testing notebook with additional integral term'
-│   ├── paramsearch_iter0_norm_td3.ipynb 'Testing notebook for hyperparamater search iteration 0'
-│   ├── paramsearch_iter1_norm_td3.ipynb 'Testing notebook for hyperparamater search iteration 1'
-│   ├── paramsearch_iter2_norm_td3.ipynb 'Testing notebook for hyperparamater search iteration 2 and 3'
-│   ├── reward_testing_ddpg.ipynb 'Testing notebook for reward function analysis'
-│   ├── robust_agent_testing.ipynb 'Testing notebook for the robust agent'
-│   ├── simple_agent_testing.ipynb 'Testing notebook for the simple agent'
-│   ├── td3_n_it2_an_var1_extralay_extralay_s0 'Model folder (load w/ pytorch) of the final simple agent'
-│   └── best_agent_robustified 'Model folder (load w/ pytorch) of the final robust agent'
-└── training_udalib 'Preliminary experiments using the udalib library before moving to spinning up'
+├── ss_ananlysis_q_value 'Analysis the cause of steady state error from the view of Q function'
+├── ss_ananlysis_return 'Analysis the cause of steady state error from the view of return'
+├── test_gyro 'Implement and apply RL controller on real gyro'
+├── test_implementation 'Test implementation of Gym environment'
+├── test_set 'Generate a test set'
+├── train_gyro 'Train RL controllers on gyro'
+├── train_robust 'Train robust agents in virtual environment'
+└── tune_hyper 'Hyperparameter searching' 
 ```
-
 
 ```python
 
